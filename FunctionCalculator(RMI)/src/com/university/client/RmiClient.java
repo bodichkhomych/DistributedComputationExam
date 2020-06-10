@@ -1,6 +1,6 @@
 package com.university.client;
 
-import com.university.rmi.ICalculator;
+import com.university.rmi.Calculator;
 
 import java.net.MalformedURLException;
 import java.rmi.Naming;
@@ -9,11 +9,11 @@ import java.rmi.RemoteException;
 import java.util.List;
 
 public class RmiClient {
-    private ICalculator calculator;
+    private Calculator calculator;
     private String remoteURL = "//127.0.0.1:1234/calc";
 
     public RmiClient() throws RemoteException, NotBoundException, MalformedURLException {
-        calculator = (ICalculator) Naming.lookup(remoteURL);
+        calculator = (Calculator) Naming.lookup(remoteURL);
         System.out.println("RMI object found");
     }
 

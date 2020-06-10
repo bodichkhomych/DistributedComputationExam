@@ -5,8 +5,8 @@ import java.rmi.server.UnicastRemoteObject;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FunctionCalculator extends UnicastRemoteObject implements ICalculator {
-    public FunctionCalculator() throws RemoteException {
+public class Calculatoring extends UnicastRemoteObject implements Calculator {
+    public Calculatoring() throws RemoteException {
         super();
     }
 
