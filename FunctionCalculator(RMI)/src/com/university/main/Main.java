@@ -10,7 +10,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("This program can calculate function: tan(x) - a with the help of RMI.");
+        System.out.println("This program is calculating the function: tan(x) - a with the help of RMI.");
         double a, xFrom, xTo, step;
         Scanner in = new Scanner(System.in);
         System.out.print("Enter a value: ");
