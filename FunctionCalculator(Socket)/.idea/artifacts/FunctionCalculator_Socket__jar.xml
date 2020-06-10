@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="FunctionCalculator(Socket):jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/FunctionCalculator_Socket__jar</output-path>
+    <root id="archive" name="FunctionCalculator(Socket).jar">
+      <element id="module-output" name="FunctionCalculator(Socket)" />
+    </root>
+  </artifact>
+</component>
