@@ -1,6 +1,6 @@
 package com.university.client;
 
-import com.university.calculator.CalculatorParams;
+import com.university.calculator.СomputationParams;
 
 import java.io.*;
 import java.net.Socket;
@@ -19,7 +19,7 @@ public class Client {
     }
 
     public List<Double> calculate(double a, double xFrom, double xTo, double step) throws IOException, ClassNotFoundException {
-        CalculatorParams params = new CalculatorParams(a,xFrom,xTo,step);
+        СomputationParams params = new СomputationParams(a,xFrom,xTo,step);
         objectOutputStream.writeObject(params);
         List<Double> result = (List<Double>)objectInputStream.readObject();
         return result;
@@ -29,16 +29,16 @@ public class Client {
         sock.close();
     }
     public static void main(String[] args) {
-        System.out.println("This program can calculate function: tan(x) - a with the help of Socket.");
+        System.out.println("This program is calculating the function: tan(x) - a");
         double a, xFrom, xTo, step;
         Scanner in = new Scanner(System.in);
-        System.out.print("Enter a value: ");
+        System.out.print("Enter main value: ");
         a = in.nextFloat();
-        System.out.print("Enter start x value: ");
+        System.out.print("Enter begin value of parameter: ");
         xFrom = in.nextFloat();
-        System.out.print("Enter last x value: ");
+        System.out.print("Enter finished value of parameter: ");
         xTo = in.nextFloat();
-        System.out.print("Enter step: ");
+        System.out.print("Enter computation step: ");
         step = in.nextFloat();
 
         Client client = null;

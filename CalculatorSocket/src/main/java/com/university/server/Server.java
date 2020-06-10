@@ -1,8 +1,8 @@
 package com.university.server;
 
-import com.university.calculator.CalculatorParams;
-import com.university.calculator.FunctionCalculator;
-import com.university.calculator.ICalculator;
+import com.university.calculator.СomputationParams;
+import com.university.calculator.Сomputation;
+import com.university.calculator.Сomputate;
 
 import java.io.DataOutputStream;
 import java.io.IOException;
@@ -18,11 +18,11 @@ public class Server {
     private ObjectInputStream objectInputStream = null;
     private ObjectOutputStream objectOutputStream = null;
     private DataOutputStream out = null;
-    private ICalculator calculator;
+    private Сomputate calculator;
 
     public void start(int port) throws IOException, ClassNotFoundException {
         server = new ServerSocket(port);
-        calculator = new FunctionCalculator();
+        calculator = new Сomputation();
         while (true) {
             sock = server.accept();
             objectInputStream = new ObjectInputStream(sock.getInputStream());
@@ -34,7 +34,7 @@ public class Server {
     }
 
     private void processQuery() throws IOException, ClassNotFoundException {
-        CalculatorParams params = (CalculatorParams) objectInputStream.readObject();
+        СomputationParams params = (СomputationParams) objectInputStream.readObject();
         List<Double> result = calculator.calculate(params.a,params.xFom,params.xTo,params.step);
         objectOutputStream.writeObject(result);
     }

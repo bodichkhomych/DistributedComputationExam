@@ -10,16 +10,16 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("This program is calculating the function: tan(x) - a with the help of RMI.");
+        System.out.println("This program is calculating the function: tan(x) - a");
         double a, xFrom, xTo, step;
         Scanner in = new Scanner(System.in);
-        System.out.print("Enter a value: ");
+        System.out.print("Enter main value: ");
         a = in.nextFloat();
-        System.out.print("Enter start x value: ");
+        System.out.print("Enter begin x value: ");
         xFrom = in.nextFloat();
-        System.out.print("Enter last x value: ");
+        System.out.print("Enter finished x value: ");
         xTo = in.nextFloat();
-        System.out.print("Enter step: ");
+        System.out.print("Enter calculation step: ");
         step = in.nextFloat();
 
         try {

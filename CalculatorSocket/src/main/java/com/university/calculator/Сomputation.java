@@ -4,8 +4,8 @@ import java.rmi.RemoteException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FunctionCalculator implements ICalculator {
-    public FunctionCalculator() throws RemoteException {
+public class Сomputation implements Сomputate {
+    public Сomputation() throws RemoteException {
         super();
     }
 
